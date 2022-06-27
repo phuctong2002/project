@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="780.0" prefWidth="1321.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.LoginController">
+   <children>
+      <Pane layoutX="14.0" layoutY="11.0" prefHeight="848.0" prefWidth="554.0">
+         <children>
+            <ImageView fitHeight="474.0" fitWidth="537.0" layoutX="9.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/istockphoto-1185276789-1024x1024.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <VBox layoutX="514.0" layoutY="193.0" prefHeight="375.0" prefWidth="809.0" style="-fx-background-color: #6dcee1; -fx-border-radius: 20;">
+         <children>
+            <Label alignment="CENTER" prefHeight="87.0" prefWidth="800.0" text="Log In">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="394.0" prefWidth="800.0">
+               <children>
+                  <Label layoutX="205.0" layoutY="32.0" prefHeight="30.0" prefWidth="117.0" text="User name">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="205.0" layoutY="101.0" prefHeight="30.0" prefWidth="117.0" text="Password">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="loginTextField" layoutX="333.0" layoutY="31.0" prefHeight="31.0" prefWidth="258.0" style="-fx-background-radius: 0;" />
+                  <PasswordField fx:id="loginPasswordField" layoutX="333.0" layoutY="101.0" prefHeight="31.0" prefWidth="258.0" />
+                  <Button layoutX="498.0" layoutY="166.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="31.0" prefWidth="89.0" text="Log In" />
+                  <Button layoutX="362.0" layoutY="166.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="31.0" prefWidth="110.0" style="-fx-border-width: 0 0 0 0; -fx-border-radius: 12; -fx-display: block;" text="Register" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <Pane layoutX="514.0" layoutY="-1.0" prefHeight="194.0" prefWidth="809.0" style="-fx-background-color: #6dcee1;" />
+      <Pane layoutX="514.0" layoutY="568.0" prefHeight="211.0" prefWidth="809.0" style="-fx-background-color: #6dcee1;" />
+   </children>
+</Pane>
