@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.AdminController">
+   <children>
+      <BorderPane fx:id="borderPaneAdmin" prefHeight="780.0" prefWidth="1320.0">
+         <top>
+            <Pane prefHeight="80.0" prefWidth="1320.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1065.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/user-regular.jpg" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+         </top>
+         <left>
+            <VBox prefHeight="700.0" prefWidth="300.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#admin1" prefHeight="50.0" prefWidth="300.0" text="Thong ke nhung nguoi mac tiep xuc">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="40.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#admin2" prefHeight="50.0" prefWidth="300.0" text="Them">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#admin3" prefHeight="50.0" prefWidth="300.0" text="Thong ke tung phuong">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#admin4" prefHeight="50.0" prefWidth="300.0" text="Dang xuat">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Pane prefHeight="321.0" prefWidth="300.0" />
+               </children></VBox>
+         </left>
+      </BorderPane>
+      <Pane layoutX="1120.0" layoutY="-0.0" prefHeight="80.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="nameAdmin" alignment="CENTER" prefHeight="80.0" prefWidth="200.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

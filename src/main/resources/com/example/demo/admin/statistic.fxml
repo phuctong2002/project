@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.admin.StatisticController">
+   <children>
+      <TableView fx:id="tbStatistic" layoutX="13.0" layoutY="43.0" prefHeight="614.0" prefWidth="995.0">
+        <columns>
+          <TableColumn fx:id="nameStatistic" prefWidth="173.0" text="Ho  ten" />
+            <TableColumn fx:id="idStatistic" prefWidth="137.0" text="Id" />
+            <TableColumn fx:id="addressStatistic" minWidth="0.0" prefWidth="124.0" text="Address" />
+            <TableColumn fx:id="statistic_1" prefWidth="147.0" text="Co trieu chung" />
+            <TableColumn fx:id="statistic_2" prefWidth="152.0" text="tiep xuc nguoi benh" />
+            <TableColumn fx:id="statistic_3" minWidth="0.0" prefWidth="113.0" text="Tu vung dich" />
+            <TableColumn fx:id="statistic_4" prefWidth="173.0" text="Nguoi co bieu hien" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>

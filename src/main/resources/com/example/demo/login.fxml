@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="780.0" prefWidth="1321.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.LoginController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="780.0" prefWidth="1320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.LoginController">
    <children>
       <Pane layoutX="14.0" layoutY="11.0" prefHeight="848.0" prefWidth="554.0">
          <children>
@@ -38,8 +38,10 @@
                   </Label>
                   <TextField fx:id="loginTextField" layoutX="333.0" layoutY="31.0" prefHeight="31.0" prefWidth="258.0" style="-fx-background-radius: 0;" />
                   <PasswordField fx:id="loginPasswordField" layoutX="333.0" layoutY="101.0" prefHeight="31.0" prefWidth="258.0" />
-                  <Button layoutX="498.0" layoutY="166.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="31.0" prefWidth="89.0" text="Log In" />
-                  <Button layoutX="362.0" layoutY="166.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="31.0" prefWidth="110.0" style="-fx-border-width: 0 0 0 0; -fx-border-radius: 12; -fx-display: block;" text="Register" />
+                  <Button layoutX="502.0" layoutY="213.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="31.0" prefWidth="89.0" text="Log In" />
+                  <Button layoutX="361.0" layoutY="213.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="31.0" prefWidth="110.0" style="-fx-border-width: 0 0 0 0; -fx-border-radius: 12; -fx-display: block;" text="Register" />
+                  <CheckBox fx:id="checkUser" layoutX="429.0" layoutY="146.0" mnemonicParsing="false" text="login with doctor account" />
+                  <CheckBox fx:id="checkAdmin" layoutX="429.0" layoutY="176.0" mnemonicParsing="false" text="login with admin account" />
                </children>
             </Pane>
          </children>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.RegisterInjectController">
+   <children>
+      <VBox prefHeight="720.0" prefWidth="1000.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="120.0" prefWidth="1000.0" style="-fx-background-color: #990099;" text="Dang Ky Tiem Chung">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="600.0" prefWidth="1000.0">
+               <children>
+                  <VBox layoutX="310.0" prefHeight="555.0" prefWidth="380.0">
+                     <children>
+                        <Pane prefHeight="120.0" prefWidth="380.0">
+                           <children>
+                              <Label prefHeight="40.0" prefWidth="380.0" text="Ho Ten" />
+                              <TextField fx:id="nameRegister" editable="false" layoutY="40.0" prefHeight="80.0" prefWidth="380.0" style="-fx-background-color: #fff; -fx-border-color: #fff;" text="Tong Phuc">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="120.0" prefWidth="380.0">
+                           <children>
+                              <Label prefHeight="40.0" prefWidth="380.0" text="So Ho Chieu/CMNN/CCCD" />
+                              <TextField fx:id="idRegister" editable="false" layoutY="40.0" prefHeight="80.0" prefWidth="380.0" style="-fx-background-color: #fff; -fx-border-color: #fff;" text="038202001869">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </TextField>
+                              <Line endX="280.0" layoutX="101.0" layoutY="7.0" startX="-100.0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="120.0" prefWidth="380.0">
+                           <children>
+                              <Label prefHeight="40.0" prefWidth="380.0" text="Noi dang ky tiem" />
+                              <ComboBox fx:id="hospitalRegister" layoutY="60.0" prefHeight="40.0" prefWidth="380.0" />
+                              <Line endX="280.0" layoutX="101.0" layoutY="1.0" startX="-100.0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="120.0" prefWidth="380.0">
+                           <children>
+                              <Label prefHeight="40.0" prefWidth="380.0" text="Thoi gian dang ky tiem" />
+                              <DatePicker fx:id="timeRegister" layoutY="60.0" prefHeight="40.0" prefWidth="380.0" />
+                              <Line endX="280.0" layoutX="101.0" layoutY="1.0" startX="-100.0" />
+                              <Line endX="280.0" layoutX="102.0" layoutY="120.0" startX="-100.0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="75.0" prefWidth="380.0">
+                           <children>
+                              <Button fx:id="submitRegister" layoutX="139.0" layoutY="22.0" mnemonicParsing="false" text="Gui Dang Ky" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</Pane>

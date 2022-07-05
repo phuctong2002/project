@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.CertificationController">
+    <children>
+        <VBox prefHeight="720.0" prefWidth="1000.0">
+            <children>
+                <Pane prefHeight="225.0" prefWidth="1000.0">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="64.0" prefWidth="1000.0" text="Chung nhan ngua Covid">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="465.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@icons/check-solid.jpg" />
+                            </image></ImageView>
+                        <Label fx:id="numberInjection" alignment="CENTER" layoutY="131.0" prefHeight="70.0" prefWidth="1000.0" text="Label">
+                            <font>
+                                <Font size="32.0" />
+                            </font>
+                        </Label>
+                        <Line endX="100.0" layoutX="496.0" layoutY="131.0" startX="-100.0" />
+                        <Line endX="100.0" layoutX="496.0" layoutY="201.0" startX="-100.0" />
+                    </children>
+                </Pane>
+                <Pane prefHeight="503.0" prefWidth="1000.0">
+                    <children>
+                        <VBox layoutX="288.0" layoutY="112.0" prefHeight="300.0" prefWidth="425.0" style="-fx-background-color: #8a8a5c;">
+                            <children>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Pane prefHeight="100.0" prefWidth="100.0">
+                                            <children>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@icons/user-regular.jpg" />
+                                                    </image>
+                                                </ImageView>
+                                            </children>
+                                        </Pane>
+                                        <Pane prefHeight="100.0" prefWidth="335.0">
+                                            <children>
+                                                <Label prefHeight="40.0" prefWidth="335.0" text="Ho Ten" />
+                                                <Label fx:id="nameCertification" layoutY="40.0" prefHeight="60.0" prefWidth="335.0" text="Tong Van Phuc">
+                                                    <font>
+                                                        <Font name="System Bold" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                                <Line endX="225.0" layoutX="101.0" layoutY="100.0" startX="-100.0" />
+                                            </children>
+                                        </Pane>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Pane prefHeight="100.0" prefWidth="100.0">
+                                            <children>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@icons/calendar-regular.jpg" />
+                                                    </image></ImageView>
+                                            </children>
+                                        </Pane>
+                                        <Pane prefHeight="100.0" prefWidth="335.0">
+                                            <children>
+                                                <Label prefHeight="40.0" prefWidth="335.0" text="Ngay sinh" />
+                                                <Label fx:id="dobCertification" layoutY="40.0" prefHeight="60.0" prefWidth="335.0" text="15/09/2002">
+                                                    <font>
+                                                        <Font name="System Bold" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                                <Line endX="225.0" layoutX="101.0" layoutY="100.0" startX="-100.0" />
+                                            </children>
+                                        </Pane>
+                                    </children></HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Pane prefHeight="100.0" prefWidth="100.0">
+                                            <children>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@icons/address-card-regular.jpg" />
+                                                    </image>
+                                                </ImageView>
+                                            </children>
+                                        </Pane>
+                                        <Pane prefHeight="100.0" prefWidth="335.0">
+                                            <children>
+                                                <Label prefHeight="40.0" prefWidth="335.0" text="So ho chieu/CMNN/CCCD" />
+                                                <Label fx:id="idCertification" layoutY="40.0" prefHeight="60.0" prefWidth="335.0" text="038202001869">
+                                                    <font>
+                                                        <Font name="System Bold" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </Pane>
+                                    </children></HBox>
+                            </children>
+                        </VBox>
+                        <Label layoutX="294.0" layoutY="60.0" prefHeight="21.0" prefWidth="135.0" text="Thong tin ca nhan" />
+                    </children>
+                </Pane>
+            </children>
+        </VBox>
+    </children>
+</Pane>

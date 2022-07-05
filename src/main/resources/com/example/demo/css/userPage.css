@@ -1,0 +1,11 @@
+.control{
+    -fx-background-color: #9f20c9;
+    -fx-border-radius:0;
+    -fx-text-fill: #fff;
+}
+
+.control:hover{
+    -fx-background-color: #fff;
+
+    -fx-text-fill: black;
+}

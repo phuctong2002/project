@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.InforController">
+   <children>
+      <VBox prefHeight="720.0" prefWidth="1000.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="120.0" prefWidth="1000.0" text="Thong tin chinh">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="480.0" prefWidth="1000.0">
+               <children>
+                  <VBox prefHeight="480.0" prefWidth="500.0">
+                     <children>
+                        <HBox prefHeight="120.0" prefWidth="500.0">
+                           <children>
+                              <Pane prefHeight="120.0" prefWidth="120.0">
+                                 <children>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="45.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/user-regular.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <VBox prefHeight="120.0" prefWidth="380.0">
+                                 <children>
+                                    <Label prefHeight="40.0" prefWidth="380.0" text="Ho Ten" />
+                                    <TextField fx:id="nameInfor" prefHeight="80.0" prefWidth="380.0" style="-fx-border-color: #fff; -fx-background-color: #fff;" text="Tong Phuc">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="120.0" prefWidth="500.0">
+                           <children>
+                              <Pane prefHeight="120.0" prefWidth="120.0">
+                                 <children>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="45.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/address-card-regular.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <VBox prefHeight="120.0" prefWidth="380.0">
+                                 <children>
+                                    <Label prefHeight="40.0" prefWidth="380.0" text="So Ho Chieu/CMND/CCCD" />
+                                    <TextField fx:id="idInfor" prefHeight="80.0" prefWidth="380.0" style="-fx-border-color: #fff; -fx-background-color: #fff;" text="038202001869">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="120.0" prefWidth="500.0">
+                           <children>
+                              <Pane prefHeight="120.0" prefWidth="120.0">
+                                 <children>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="45.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/square-envelope-solid.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <VBox prefHeight="120.0" prefWidth="380.0">
+                                 <children>
+                                    <Label prefHeight="40.0" prefWidth="380.0" text="Email" />
+                                    <TextField fx:id="mailInfor" prefHeight="80.0" prefWidth="380.0" style="-fx-border-color: #fff; -fx-background-color: #fff;" text="vanphuc15092002@gmail.com">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="120.0" prefWidth="500.0">
+                           <children>
+                              <Pane prefHeight="120.0" prefWidth="120.0">
+                                 <children>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="45.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/lock-solid.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <VBox prefHeight="120.0" prefWidth="380.0">
+                                 <children>
+                                    <Label prefHeight="40.0" prefWidth="380.0" text="Password" />
+                                    <PasswordField fx:id="passInfor" prefHeight="80.0" style="-fx-border-color: #fff;" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="480.0" prefWidth="500.0">
+                     <children>
+                        <HBox prefHeight="120.0" prefWidth="500.0">
+                           <children>
+                              <Pane prefHeight="120.0" prefWidth="120.0">
+                                 <children>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="45.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/mars-solid.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <VBox prefHeight="120.0" prefWidth="380.0">
+                                 <children>
+                                    <Label prefHeight="40.0" prefWidth="380.0" text="Gender" />
+                                    <ChoiceBox fx:id="genderInfor" prefHeight="50.0" prefWidth="350.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="120.0" prefWidth="500.0">
+                           <children>
+                              <Pane prefHeight="120.0" prefWidth="120.0">
+                                 <children>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="45.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/calendar-regular.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <VBox prefHeight="120.0" prefWidth="380.0">
+                                 <children>
+                                    <Label prefHeight="40.0" prefWidth="380.0" text="DOB" />
+                                    <DatePicker fx:id="dobInfor" prefHeight="50.0" prefWidth="350.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="120.0" prefWidth="500.0">
+                           <children>
+                              <Pane prefHeight="120.0" prefWidth="120.0">
+                                 <children>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="45.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/location-dot-solid.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <VBox prefHeight="120.0" prefWidth="380.0">
+                                 <children>
+                                    <Label prefHeight="40.0" prefWidth="380.0" text="Address" />
+                                    <ComboBox fx:id="addressInfor" prefHeight="50.0" prefWidth="350.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="120.0" prefWidth="500.0">
+                           <children>
+                              <Pane prefHeight="120.0" prefWidth="120.0">
+                                 <children>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="45.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/house-medical-solid.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <VBox prefHeight="120.0" prefWidth="380.0">
+                                 <children>
+                                    <Label prefHeight="40.0" prefWidth="380.0" text="Hospital" />
+                                    <ComboBox fx:id="hospitalInfor" prefHeight="50.0" prefWidth="350.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Pane prefHeight="120.0" prefWidth="1000.0">
+               <children>
+                  <Button layoutX="435.0" layoutY="45.0" mnemonicParsing="false" onAction="#submitInfor" prefHeight="43.0" prefWidth="131.0" text="Luu thong tin" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</Pane>

@@ -6,10 +6,17 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Date;
 
 public class HelloApplication extends Application {
     public static String name = "";
     public static String email = "";
+    public static String id = "";
+    public static String dob = "";
+    public static String pass = "";
+
+    public static int num = 0;
+
     public static Stage window = null;
     public static Scene scene = null;
     public static FXMLLoader fxmlLoader = null;
@@ -17,7 +24,7 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         HelloApplication.window = stage;
         HelloApplication.fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login.fxml"));
-        HelloApplication.scene = new Scene(fxmlLoader.load());
+        HelloApplication.scene = new Scene(HelloApplication.fxmlLoader.load());
 //        HelloApplication.window.setMaximized( true);
         HelloApplication.window.setTitle("Hello!");
         HelloApplication.window.setScene(scene);

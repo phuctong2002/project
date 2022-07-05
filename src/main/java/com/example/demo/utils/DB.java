@@ -56,23 +56,30 @@ public class DB {
         }
 
     }
-    // DB excute update
-    public static void dbExcuteUpdate( String sqlStmt) throws SQLException, ClassNotFoundException{
+    // DB execute update
+    public static int dbExecuteUpdate( String sqlStmt) throws SQLException, ClassNotFoundException{
         Statement stmt  = null;
+        int a = 0;
         try{
             dbConnect();
             stmt = conn.createStatement();
             stmt.executeUpdate(sqlStmt);
+
         } catch ( Exception e ){
+            a = 1;
             System.out.println("Problem occurred at executeUpdate operation : " + e);
             throw e;
         } finally {
+
             if( stmt != null){
                 // close statement
                 stmt.close();
             }
             dbDisconnect();
+            System.out.println( "********************" + a+ "********************");
+            return a;
         }
+
     }
 
 }

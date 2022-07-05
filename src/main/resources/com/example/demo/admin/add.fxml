@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.admin.AddController">
+   <children>
+      <HBox prefHeight="700.0" prefWidth="1020.0">
+         <children>
+            <Pane prefHeight="700.0" prefWidth="450.0">
+               <children>
+                  <VBox layoutX="26.0" layoutY="51.0" prefHeight="496.0" prefWidth="424.0">
+                     <children>
+                        <HBox prefHeight="80.0" prefWidth="450.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="80.0" prefWidth="120.0" text="Hospital">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="80.0" prefWidth="330.0">
+                                 <children>
+                                    <ComboBox fx:id="hospitalAdd" layoutX="40.0" layoutY="25.0" prefWidth="200.0" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="80.0" prefWidth="450.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="80.0" prefWidth="120.0" text="Quantity">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Pane prefHeight="80.0" prefWidth="330.0">
+                                 <children>
+                                    <TextField fx:id="quantityAdd" layoutX="40.0" layoutY="25.0" prefWidth="200.0" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <Pane prefHeight="100.0" prefWidth="450.0">
+                           <children>
+                              <Button layoutX="175.0" layoutY="35.0" mnemonicParsing="false" onAction="#btnAdd" prefHeight="31.0" prefWidth="101.0" text="Add" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane prefHeight="700.0" prefWidth="570.0">
+               <children>
+                  <TableView fx:id="tbAdd" prefHeight="548.0" prefWidth="570.0">
+                    <columns>
+                      <TableColumn fx:id="hopitalColumnAdd" prefWidth="318.0" text="Hospital" />
+                      <TableColumn fx:id="quantityColumnAdd" prefWidth="251.0" text="Quantity" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</Pane>
