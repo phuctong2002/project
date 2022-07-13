@@ -45,10 +45,10 @@ public class StatisticController implements Initializable {
                 abc.setName( userPatient.getString("name"));
                 abc.setId( userPatient.getString("pat_id"));
                 abc.setAddress(userPatient.getString("address"));
-                abc.setA1(userPatient.getInt("systoms_14_days"));
+                abc.setA1(userPatient.getInt("symptom_14_days"));
                 abc.setA2(userPatient.getInt("contact"));
                 abc.setA3(userPatient.getInt("contact_foreign"));
-                abc.setA4(userPatient.getInt("contact_sysptom"));
+                abc.setA4(userPatient.getInt("contact_symptom"));
                 userList.add(abc);
 //                System.out.println( userPatient.getString("name") + userPatient.getString("name") + userPatient.getString("pat_id") + userPatient.getString("address") );
 
@@ -74,7 +74,7 @@ public class StatisticController implements Initializable {
 
     }
     private ResultSet getDeclare() throws SQLException, ClassNotFoundException{
-        String queryStr = "SELECT    first_name || ' ' || last_name as name, d.pat_id, address, systoms_14_days, contact, contact_foreign, contact_sysptom FROM (( SELECT * FROM declaration WHERE (date(time_declare) - CURRENT_DATE )::INTEGER  <= 14)  AS d LEFT JOIN patient ON d.pat_id = patient.pat_id ) ;";
+        String queryStr = "SELECT    first_name || ' ' || last_name as name, d.pat_id, address, symptom_14_days, contact, contact_foreign, contact_symptom FROM (( SELECT * FROM declaration WHERE (date(time_declare) - CURRENT_DATE )::INTEGER  <= 14)  AS d LEFT JOIN patient ON d.pat_id = patient.pat_id ) ;";
         ResultSet a = null;
         try{
             a = DB.dbExecuteQuery(queryStr);

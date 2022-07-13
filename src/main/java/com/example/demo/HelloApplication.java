@@ -10,12 +10,17 @@ import java.sql.Date;
 
 public class HelloApplication extends Application {
     public static String name = "";
+    public static String first_name ="";
+    public static String last_name = "";
     public static String email = "";
     public static String id = "";
     public static String dob = "";
     public static String pass = "";
 
     public static int num = 0;
+    public static String address = "";
+    public static String gender = "";
+//    public static String hospital = "";
 
     public static Stage window = null;
     public static Scene scene = null;

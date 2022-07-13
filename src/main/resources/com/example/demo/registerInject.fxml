@@ -6,7 +6,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.RegisterInjectController">
    <children>
       <VBox prefHeight="720.0" prefWidth="1000.0">
@@ -58,7 +57,7 @@
                         </Pane>
                         <Pane prefHeight="75.0" prefWidth="380.0">
                            <children>
-                              <Button fx:id="submitRegister" layoutX="139.0" layoutY="22.0" mnemonicParsing="false" text="Gui Dang Ky" />
+                              <Button fx:id="btnReg" layoutX="139.0" layoutY="22.0" mnemonicParsing="false" onAction="#submitRegister" text="Gui Dang Ky" />
                            </children>
                         </Pane>
                      </children>

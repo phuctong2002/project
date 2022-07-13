@@ -84,9 +84,11 @@ public class LoginController {
                         HelloApplication.id = user.getString("pat_id");
                         HelloApplication.dob = user.getString("dob");
                         HelloApplication.pass = user.getString("password");
-
-
-
+                        HelloApplication.address = user.getString("address");
+                        HelloApplication.gender = user.getString("gender");
+                        HelloApplication.first_name = user.getString("first_name");
+                        HelloApplication.last_name = user.getString("last_name");
+                        HelloApplication.num = user.getInt("number_injection");
                         HelloApplication.fxmlLoader = new FXMLLoader( HelloApplication.class.getResource("UserPage.fxml"));
                         HelloApplication.scene = new Scene(HelloApplication.fxmlLoader.load());
 

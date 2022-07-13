@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.ResponseController">
+   <children>
+      <Pane prefHeight="100.0" prefWidth="1000.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="100.0" prefWidth="1000.0" text="Phan ung sau tiem">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <VBox layoutX="300.0" layoutY="100.0" prefHeight="620.0" prefWidth="400.0">
+         <children>
+            <Pane prefHeight="120.0" prefWidth="400.0">
+               <children>
+                  <Label prefHeight="40.0" prefWidth="400.0" text="Doi tuong tiem" />
+                  <TextField fx:id="nameResponse" editable="false" layoutY="40.0" prefHeight="40.0" prefWidth="400.0" />
+               </children>
+            </Pane>
+            <Pane prefHeight="120.0" prefWidth="400.0">
+               <children>
+                  <Label prefHeight="40.0" prefWidth="400.0" text="Mui tiem" />
+                  <ComboBox fx:id="injectResponse" layoutY="40.0" prefHeight="40.0" prefWidth="400.0" />
+               </children>
+            </Pane>
+            <Pane prefHeight="186.0" prefWidth="400.0">
+               <children>
+                  <Label prefHeight="40.0" prefWidth="400.0" text="Ban co gap bat ki trieu chung nao sau khi tiem" />
+                  <CheckBox fx:id="noResponse" layoutX="42.0" layoutY="59.0" mnemonicParsing="false" text="khong" />
+                  <CheckBox fx:id="yesResponse" layoutX="42.0" layoutY="99.0" mnemonicParsing="false" text="Co" />
+               </children>
+            </Pane>
+            <Button fx:id="btnResponse" mnemonicParsing="false" onAction="#submitResponse" prefHeight="40.0" prefWidth="100.0" text="Luu ">
+               <VBox.margin>
+                  <Insets left="150.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</Pane>

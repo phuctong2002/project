@@ -76,6 +76,8 @@ public class UserPageController implements Initializable {
     @FXML
     public void handle4(){
         // dk tiem chung nhe
+        view = getPane("response.fxml");
+        content.setCenter( view);
     }
     @FXML
     public void handle5(){
@@ -91,5 +93,14 @@ public class UserPageController implements Initializable {
             System.out.println("Error in getPane method userpagecontroler" + e.getMessage());
         }
         return a;
+    }
+
+
+    @FXML
+    public void showInfor(){
+        System.out.println("Show thong tin");
+        view = getPane("showInfor.fxml");
+        content.setCenter( view);
+
     }
 }

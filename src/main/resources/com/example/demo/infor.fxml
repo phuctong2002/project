@@ -32,8 +32,8 @@
                               </Pane>
                               <VBox prefHeight="120.0" prefWidth="380.0">
                                  <children>
-                                    <Label prefHeight="40.0" prefWidth="380.0" text="Ho Ten" />
-                                    <TextField fx:id="nameInfor" prefHeight="80.0" prefWidth="380.0" style="-fx-border-color: #fff; -fx-background-color: #fff;" text="Tong Phuc">
+                                    <Label prefHeight="40.0" prefWidth="380.0" text="Ho " />
+                                    <TextField fx:id="nameInfor" prefHeight="80.0" prefWidth="380.0" style="-fx-border-color: #fff; -fx-background-color: #fff;" text="Tong ">
                                        <font>
                                           <Font size="24.0" />
                                        </font>
@@ -55,8 +55,8 @@
                               </Pane>
                               <VBox prefHeight="120.0" prefWidth="380.0">
                                  <children>
-                                    <Label prefHeight="40.0" prefWidth="380.0" text="So Ho Chieu/CMND/CCCD" />
-                                    <TextField fx:id="idInfor" prefHeight="80.0" prefWidth="380.0" style="-fx-border-color: #fff; -fx-background-color: #fff;" text="038202001869">
+                                    <Label prefHeight="40.0" prefWidth="380.0" text="Ten" />
+                                    <TextField fx:id="idInfor" prefHeight="80.0" prefWidth="380.0" style="-fx-border-color: #fff; -fx-background-color: #fff;" text="Phuc">
                                        <font>
                                           <Font size="24.0" />
                                        </font>
@@ -193,7 +193,7 @@
             </HBox>
             <Pane prefHeight="120.0" prefWidth="1000.0">
                <children>
-                  <Button layoutX="435.0" layoutY="45.0" mnemonicParsing="false" onAction="#submitInfor" prefHeight="43.0" prefWidth="131.0" text="Luu thong tin" />
+                  <Button fx:id="btnSubmitInfor" layoutX="435.0" layoutY="45.0" mnemonicParsing="false" onAction="#submitInfor" prefHeight="43.0" prefWidth="131.0" text="Luu thong tin" />
                </children>
             </Pane>
          </children>

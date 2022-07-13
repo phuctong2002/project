@@ -47,7 +47,7 @@ public class DeclareController implements Initializable {
         if( radio8.isSelected()) a4 = 0;
         // thuc hien select vao database
         System.out.println("******Thuc hien insert vao database*****");
-        String queryStr = "insert into declaration ( pat_id, systoms_14_days, contact, contact_foreign, contact_sysptom ) values"
+        String queryStr = "insert into declaration ( pat_id, symptom_14_days, contact, contact_foreign, contact_symptom ) values"
                 + "('"+ HelloApplication.id+ "'," + a1 + "," + a2 + "," + a3 + "," + a4 + ");" ;
         int a = DB.dbExecuteUpdate( queryStr);
         if( a != 0) AlertBox.displayAlert("Khong thanh cong");

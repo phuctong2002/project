@@ -1,16 +1,26 @@
 package com.example.demo.controller;
 
 import com.example.demo.HelloApplication;
+import com.example.demo.utils.AlertBox;
+import com.example.demo.utils.DB;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 
+import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
+
+import static com.example.demo.HelloApplication.*;
 
 public class InforController implements Initializable {
 
-
+    @FXML
+    public Button btnSubmitInfor;
 
     @FXML
     public TextField nameInfor;
@@ -40,15 +50,81 @@ public class InforController implements Initializable {
         };
         hospitalInfor.getItems().addAll(hospital);
         addressInfor.getItems().addAll( address);
-        nameInfor.setText( HelloApplication.name);
-        idInfor.setText( HelloApplication.id);
-        mailInfor.setText( HelloApplication.email);
+        nameInfor.setText( first_name);
+        idInfor.setText( HelloApplication.last_name);
+        mailInfor.setText( email);
         passInfor.setText( HelloApplication.pass);
 
     }
     @FXML
     public void submitInfor(){
+
         System.out.println("******Database trong class InforController******");
+        // thuc hien di nhe anh em nhe anh em nhe anh em nhe anh em nhe anh em enh
+        String name = nameInfor.getText();
+        String id = idInfor.getText();
+        String mail = mailInfor.getText();
+        String pass = passInfor.getText();
+        String gd;
+        if( genderInfor.getValue() == "Male") gd = "M";
+        else gd = "F";
+        String dob = String.valueOf(dobInfor.getValue());
+        String address = addressInfor.getValue();
+        String hospital = hospitalInfor.getValue();
+        String hos_id = null;
+//        System.out.println( name + " " + gd + " " + dob + " " + address + " " + hospital);
+        String query = "select hos_id from hospital where name = '" +   hospital +"';" ;
+        ResultSet hos = null;
+        try {
+            hos = DB.dbExecuteQuery(query);
+            if( hos.next()) {
+                hos_id = hos.getString( "hos_id");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println( hos_id);
+        query = "update patient set hos_id='"+hos_id+"', first_name='"+name+"', last_name='"+id+"', mail='"+ mail+"', dob = '" + dob+"',gender='" + gd+"', password='"+ pass +"', address='"+address+"' where pat_id='"+ HelloApplication.id+"';";
+        try {
+            int a =DB.dbExecuteUpdate(query);
+            if( a== 0){
+                AlertBox.displayAlert("Cap nhat thong tin thanh cong");
+                btnSubmitInfor.setDisable( true);
+                // set het tat ca cac gia tri vao day nhe anh em
+                first_name = name;
+                HelloApplication.last_name = id;
+                HelloApplication.email = mail;
+                HelloApplication.dob = dob;
+                HelloApplication.gender = (String) genderInfor.getValue();
+                HelloApplication.address = address;
+                HelloApplication.pass = pass;
+                HelloApplication.name = first_name + " " + last_name;
+
+
+                HelloApplication.fxmlLoader = new FXMLLoader( HelloApplication.class.getResource("UserPage.fxml"));
+                HelloApplication.scene = new Scene(HelloApplication.fxmlLoader.load());
+                HelloApplication.window.setTitle("Hello!");
+                HelloApplication.window.setScene(HelloApplication.scene);
+                HelloApplication.window.show();
+
+
+
+
+
+
+
+            }else{
+                AlertBox.displayAlert("Cap nhat khong thanh cong");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 
