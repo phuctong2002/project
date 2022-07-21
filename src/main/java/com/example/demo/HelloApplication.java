@@ -20,7 +20,7 @@ public class HelloApplication extends Application {
     public static int num = 0;
     public static String address = "";
     public static String gender = "";
-//    public static String hospital = "";
+    public static String hospital = "";
 
     public static Stage window = null;
     public static Scene scene = null;

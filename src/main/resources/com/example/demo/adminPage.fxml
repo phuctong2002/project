@@ -23,27 +23,31 @@
          <left>
             <VBox prefHeight="700.0" prefWidth="300.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" onAction="#admin1" prefHeight="50.0" prefWidth="300.0" text="Thong ke nhung nguoi mac tiep xuc">
+                  <ImageView fitHeight="291.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/Screenshot%202022-07-01%20224720.jpg.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" onAction="#admin1" prefHeight="102.25" prefWidth="300.0" styleClass="control" stylesheets="@css/userPage.css" text="Thong ke nhung nguoi mac tiep xuc">
                      <VBox.margin>
-                        <Insets bottom="20.0" top="40.0" />
+                        <Insets />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#admin2" prefHeight="50.0" prefWidth="300.0" text="Them">
+                  <Button mnemonicParsing="false" onAction="#admin2" prefHeight="102.25" prefWidth="300.0" styleClass="control" stylesheets="@css/userPage.css" text="Them">
                      <VBox.margin>
-                        <Insets bottom="20.0" top="20.0" />
+                        <Insets />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#admin3" prefHeight="50.0" prefWidth="300.0" text="Thong ke tung phuong">
+                  <Button mnemonicParsing="false" onAction="#admin3" prefHeight="102.25" prefWidth="300.0" styleClass="control" stylesheets="@css/userPage.css" text="Thong ke tung phuong">
                      <VBox.margin>
-                        <Insets bottom="20.0" top="20.0" />
+                        <Insets />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#admin4" prefHeight="50.0" prefWidth="300.0" text="Dang xuat">
+                  <Button mnemonicParsing="false" onAction="#admin4" prefHeight="102.25" prefWidth="300.0" styleClass="control" stylesheets="@css/userPage.css" text="Dang xuat">
                      <VBox.margin>
-                        <Insets bottom="20.0" top="20.0" />
+                        <Insets />
                      </VBox.margin>
                   </Button>
-                  <Pane prefHeight="321.0" prefWidth="300.0" />
                </children></VBox>
          </left>
       </BorderPane>

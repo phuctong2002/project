@@ -40,8 +40,8 @@
                   <PasswordField fx:id="loginPasswordField" layoutX="333.0" layoutY="101.0" prefHeight="31.0" prefWidth="258.0" />
                   <Button layoutX="502.0" layoutY="213.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="31.0" prefWidth="89.0" text="Log In" />
                   <Button layoutX="361.0" layoutY="213.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="31.0" prefWidth="110.0" style="-fx-border-width: 0 0 0 0; -fx-border-radius: 12; -fx-display: block;" text="Register" />
-                  <CheckBox fx:id="checkUser" layoutX="429.0" layoutY="146.0" mnemonicParsing="false" text="login with doctor account" />
-                  <CheckBox fx:id="checkAdmin" layoutX="429.0" layoutY="176.0" mnemonicParsing="false" text="login with admin account" />
+                  <CheckBox fx:id="checkUser" layoutX="429.0" layoutY="146.0" mnemonicParsing="false" onAction="#checkUserAction" text="login with doctor account" />
+                  <CheckBox fx:id="checkAdmin" layoutX="429.0" layoutY="176.0" mnemonicParsing="false" onAction="#checkAdminAction" text="login with admin account" />
                </children>
             </Pane>
          </children>

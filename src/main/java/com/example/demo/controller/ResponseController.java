@@ -50,6 +50,8 @@ public class ResponseController implements Initializable {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
+        noResponse.setSelected(true);
+        injectResponse.setValue( inject[0]);
 
 //            injectResponse.getItems().addAll( inject);
     }
@@ -75,5 +77,13 @@ public class ResponseController implements Initializable {
             throw new RuntimeException(e);
         }
 
+    }
+    @FXML
+    public void yesResponseAction(){
+        noResponse.setSelected( false);
+    }
+    @FXML
+    public void noResponseAction(){
+        yesResponse.setSelected(false);
     }
 }

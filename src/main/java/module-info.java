@@ -16,5 +16,6 @@ module com.example.demo {
     exports com.example.demo;
     exports com.example.demo.controller;
     exports com.example.demo.controller.admin;
+    exports com.example.demo.controller.doctor;
     exports com.example.demo.model;
 }

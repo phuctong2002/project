@@ -59,6 +59,47 @@ public class DeclareController implements Initializable {
 
     }
 
+    @FXML
+    public void radio1Action(){
+        if( radio1.isSelected())
+            radio2.setSelected(false);
+        else radio2.setSelected( true);
+    }
+    public void radio2Action(){
+        if( radio2.isSelected())
+            radio1.setSelected(false);
+        else radio1.setSelected( true);
 
+    }
+    public void radio3Action(){
+        if( radio3.isSelected())
+            radio4.setSelected(false);
+        else radio4.setSelected( true);
 
+    }
+    public void radio4Action(){
+        if( radio4.isSelected())
+            radio3.setSelected(false);
+        else radio3.setSelected( true);
+    }
+    public void radio5Action(){
+        if( radio5.isSelected())
+            radio6.setSelected(false);
+        else radio6.setSelected( true);
+    }
+    public void radio6Action(){
+        if( radio6.isSelected())
+            radio5.setSelected(false);
+        else radio5.setSelected( true);
+    }
+    public void radio7Action(){
+        if( radio7.isSelected())
+            radio8.setSelected(false);
+        else radio8.setSelected( true);
+    }
+    public void radio8Action(){
+        if( radio8.isSelected())
+            radio7.setSelected(false);
+        else radio7.setSelected( true);
+    }
 }

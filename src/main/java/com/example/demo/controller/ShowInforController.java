@@ -23,8 +23,6 @@ public class ShowInforController implements Initializable {
     public TextField dobShow;
     @FXML
     public TextField addressShow;
-    @FXML
-    public TextField hospitalShow;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         nameShow.setText(HelloApplication.name);

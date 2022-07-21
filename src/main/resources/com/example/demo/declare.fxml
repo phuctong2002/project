@@ -24,8 +24,8 @@
                   </Pane>
                   <Pane layoutY="90.0" prefHeight="50.0" prefWidth="500.0">
                      <children>
-                        <RadioButton fx:id="radio1" layoutX="28.0" layoutY="15.0" mnemonicParsing="false" text="Co" />
-                        <RadioButton fx:id="radio2" layoutX="250.0" layoutY="15.0" mnemonicParsing="false" text="Khong" />
+                        <RadioButton fx:id="radio1" layoutX="28.0" layoutY="15.0" mnemonicParsing="false" onAction="#radio1Action" text="Co" />
+                        <RadioButton fx:id="radio2" layoutX="250.0" layoutY="15.0" mnemonicParsing="false" onAction="#radio2Action" text="Khong" />
                      </children>
                   </Pane>
                </children>
@@ -44,12 +44,12 @@
                               </Pane>
                               <Pane prefHeight="70.0" prefWidth="70.0">
                                  <children>
-                                    <RadioButton fx:id="radio3" layoutX="22.0" layoutY="25.0" mnemonicParsing="false" />
+                                    <RadioButton fx:id="radio3" layoutX="22.0" layoutY="25.0" mnemonicParsing="false" onAction="#radio3Action" />
                                  </children>
                               </Pane>
                               <Pane prefHeight="70.0" prefWidth="70.0">
                                  <children>
-                                    <RadioButton fx:id="radio4" layoutX="22.0" layoutY="25.0" mnemonicParsing="false" />
+                                    <RadioButton fx:id="radio4" layoutX="22.0" layoutY="25.0" mnemonicParsing="false" onAction="#radio4Action" />
                                  </children>
                               </Pane>
                            </children>
@@ -63,12 +63,12 @@
                               </Pane>
                               <Pane prefHeight="70.0" prefWidth="70.0">
                                  <children>
-                                    <RadioButton fx:id="radio5" layoutX="22.0" layoutY="25.0" mnemonicParsing="false" />
+                                    <RadioButton fx:id="radio5" layoutX="22.0" layoutY="25.0" mnemonicParsing="false" onAction="#radio5Action" />
                                  </children>
                               </Pane>
                               <Pane prefHeight="70.0" prefWidth="70.0">
                                  <children>
-                                    <RadioButton fx:id="radio6" layoutX="22.0" layoutY="25.0" mnemonicParsing="false" />
+                                    <RadioButton fx:id="radio6" layoutX="22.0" layoutY="25.0" mnemonicParsing="false" onAction="#radio6Action" />
                                  </children>
                               </Pane>
                            </children>
@@ -82,12 +82,12 @@
                               </Pane>
                               <Pane prefHeight="70.0" prefWidth="70.0">
                                  <children>
-                                    <RadioButton fx:id="radio7" layoutX="22.0" layoutY="25.0" mnemonicParsing="false" />
+                                    <RadioButton fx:id="radio7" layoutX="22.0" layoutY="25.0" mnemonicParsing="false" onAction="#radio7Action" />
                                  </children>
                               </Pane>
                               <Pane prefHeight="70.0" prefWidth="70.0">
                                  <children>
-                                    <RadioButton fx:id="radio8" layoutX="22.0" layoutY="25.0" mnemonicParsing="false" />
+                                    <RadioButton fx:id="radio8" layoutX="22.0" layoutY="25.0" mnemonicParsing="false" onAction="#radio8Action" />
                                  </children>
                               </Pane>
                            </children>

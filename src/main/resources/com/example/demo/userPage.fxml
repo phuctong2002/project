@@ -22,12 +22,13 @@
                         <Image url="@icons/Screenshot%202022-07-01%20224720.jpg.png" />
                      </image>
                   </ImageView>
-                  <Button mnemonicParsing="false" onAction="#handle1" prefHeight="78.3" prefWidth="320.0" styleClass="control" stylesheets="@css/userPage.css" text="Chung Nhan Ngua Covid" />
-                  <Button mnemonicParsing="false" onAction="#handle2" prefHeight="78.3" prefWidth="320.0" styleClass="control" stylesheets="@css/userPage.css" text="Khai Bao Y Te" />
-                  <Button mnemonicParsing="false" onAction="#handle3" prefHeight="78.3" prefWidth="320.0" styleClass="control" stylesheets="@css/userPage.css" text="Dang ki tiem chung" />
-                  <Button mnemonicParsing="false" onAction="#handle4" prefHeight="78.4" prefWidth="320.0" styleClass="control" stylesheets="@css/userPage.css" text="Phan ung sau tiem" />
-                  <Button mnemonicParsing="false" onAction="#handle5" prefHeight="78.3" prefWidth="320.0" styleClass="control" stylesheets="@css/userPage.css" text="Chinh sua thong tin ca nhan" />
-                  <Button mnemonicParsing="false" onAction="#logoutBtn" prefHeight="78.4" prefWidth="320.0" styleClass="control" stylesheets="@css/userPage.css" text="Dang xuat" />
+                  <Button mnemonicParsing="false" onAction="#handle1" prefHeight="67.0" prefWidth="320.0" styleClass="control" stylesheets="@css/userPage.css" text="Chung Nhan Ngua Covid" />
+                  <Button mnemonicParsing="false" onAction="#handle2" prefHeight="67.0" prefWidth="320.0" styleClass="control" stylesheets="@css/userPage.css" text="Khai Bao Y Te" />
+                  <Button mnemonicParsing="false" onAction="#handle3" prefHeight="67.0" prefWidth="320.0" styleClass="control" stylesheets="@css/userPage.css" text="Dang ki tiem chung" />
+                  <Button mnemonicParsing="false" onAction="#handle34" prefHeight="67.0" prefWidth="320.0" styleClass="control" stylesheets="@css/userPage.css" text="Lich su dang ky" />
+                  <Button mnemonicParsing="false" onAction="#handle4" prefHeight="67.0" prefWidth="320.0" styleClass="control" stylesheets="@css/userPage.css" text="Phan ung sau tiem" />
+                  <Button mnemonicParsing="false" onAction="#handle5" prefHeight="67.0" prefWidth="320.0" styleClass="control" stylesheets="@css/userPage.css" text="Chinh sua thong tin ca nhan" />
+                  <Button mnemonicParsing="false" onAction="#logoutBtn" prefHeight="67.0" prefWidth="320.0" styleClass="control" stylesheets="@css/userPage.css" text="Dang xuat" />
                </children>
             </VBox>
          </left>

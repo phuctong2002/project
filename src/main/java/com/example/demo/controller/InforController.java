@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 import static com.example.demo.HelloApplication.*;
@@ -54,7 +55,17 @@ public class InforController implements Initializable {
         idInfor.setText( HelloApplication.last_name);
         mailInfor.setText( email);
         passInfor.setText( HelloApplication.pass);
+        if( HelloApplication.gender.equals("M") ){
+            System.out.println("----------Nam nhe----------");
+            genderInfor.setValue("Male");
+        }else{
+            System.out.println("----------Nu nhe----------");
+            genderInfor.setValue("Female");
 
+        }
+        addressInfor.setValue( HelloApplication.address);
+        hospitalInfor.setValue( HelloApplication.hospital);
+        dobInfor.setValue(LocalDate.parse(HelloApplication.dob));
     }
     @FXML
     public void submitInfor(){

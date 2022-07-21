@@ -39,10 +39,6 @@ public class UserPageController implements Initializable {
     @Override
     public void initialize( URL url, ResourceBundle rb){
         name.setText( HelloApplication.name);
-//        nameCertification.setText(HelloApplication.name);
-        //dobCertification.setText( HelloApplication.dob);
-        //idCertification.setText(HelloApplication.id);
-
         view = getPane("certification2.fxml");
         content.setCenter( view);
     }
@@ -82,6 +78,12 @@ public class UserPageController implements Initializable {
     @FXML
     public void handle5(){
         view = getPane("infor.fxml");
+        content.setCenter( view);
+    }
+    @FXML
+    public void handle34(){
+        System.out.println("history nhe anh em");
+        view = getPane("historyRegister.fxml");
         content.setCenter( view);
     }
 

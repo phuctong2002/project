@@ -26,58 +26,98 @@ public class LoginController {
     public CheckBox checkUser;
     @FXML
     public CheckBox checkAdmin;
+
     @FXML
     public void loginAction() throws SQLException, ClassNotFoundException {
-        System.out.println( loginTextField.getText() + " : " + loginPasswordField.getText() );
+        System.out.println(loginTextField.getText() + " : " + loginPasswordField.getText());
         ResultSet user = null;
-        try{
-            if( checkUser.isSelected()){
-                // cho phan danh nhan cua doctor nhe
-            }if( checkAdmin.isSelected()){
-                String queryStr = "select * from boss where mail = '" + loginTextField.getText() + "';";
+        try {
+            if (checkUser.isSelected()) {
+                String queryStr = "select * from doctor where mail = '" + loginTextField.getText() + "';";
 
-                user = DB.dbExecuteQuery( queryStr);
-                if ( user.next()){
+                user = DB.dbExecuteQuery(queryStr);
+                if (user.next()) {
                     String a;
                     String b;
-                    a = user.getString( "mail");
-                    b = user.getString( "password");
-                    if( a.equals( loginTextField.getText())  && b.equals( loginPasswordField.getText()) ){
+                    a = user.getString("mail");
+                    b = user.getString("password");
+                    if (a.equals(loginTextField.getText()) && b.equals(loginPasswordField.getText())) {
                         System.out.println("Login successfully");
                         HelloApplication.email = user.getString("mail");
                         HelloApplication.name = user.getString("first_name") + " " + user.getString("last_name");
-                        HelloApplication.id = user.getString("boss_id");
+                        HelloApplication.id = user.getString("doc_id");
                         HelloApplication.dob = user.getString("dob");
                         HelloApplication.pass = user.getString("password");
+                        HelloApplication.first_name = user.getString("first_name");
+                        HelloApplication.last_name = user.getString("last_name");
+                        HelloApplication.address = user.getString("address");
+                        HelloApplication.gender = user.getString("gender");
 
-
-
-                        HelloApplication.fxmlLoader = new FXMLLoader( HelloApplication.class.getResource("adminPage.fxml"));
+                        HelloApplication.fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Doc/doctor.fxml"));
                         HelloApplication.scene = new Scene(HelloApplication.fxmlLoader.load());
 
                         HelloApplication.window.setTitle("Hello!");
                         HelloApplication.window.setScene(HelloApplication.scene);
                         HelloApplication.window.show();
                         AlertBox.displayAlert("Dang Nhap Thanh Cong");
-                    }else{
+                    } else {
                         System.out.println("Login Failed");
                         AlertBox.displayAlert("Email hoac mat khau khong chinh xac");
                     }
 
-                }else{
+                } else {
+                    AlertBox.displayAlert("Email hoac mat khau khong chinh xac");
+                }
+            } else if (checkAdmin.isSelected()) {
+                String queryStr = "select * from boss where mail = '" + loginTextField.getText() + "';";
+
+                user = DB.dbExecuteQuery(queryStr);
+                if (user.next()) {
+                    String a;
+                    String b;
+                    a = user.getString("mail");
+                    b = user.getString("password");
+                    if (a.equals(loginTextField.getText()) && b.equals(loginPasswordField.getText())) {
+                        System.out.println("Login successfully");
+                        HelloApplication.email = user.getString("mail");
+                        HelloApplication.name = user.getString("first_name") + " " + user.getString("last_name");
+                        HelloApplication.id = user.getString("boss_id");
+                        HelloApplication.dob = user.getString("dob");
+                        HelloApplication.pass = user.getString("password");
+                        HelloApplication.gender = user.getString("gender");
+                        HelloApplication.address = user.getString("address");
+                        HelloApplication.first_name = user.getString("first_name");
+                        HelloApplication.last_name = user.getString("last_name");
+
+
+
+                        HelloApplication.fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("adminPage.fxml"));
+                        HelloApplication.scene = new Scene(HelloApplication.fxmlLoader.load());
+
+                        HelloApplication.window.setTitle("Hello!");
+                        HelloApplication.window.setScene(HelloApplication.scene);
+                        HelloApplication.window.show();
+                        AlertBox.displayAlert("Dang Nhap Thanh Cong");
+                    } else {
+                        System.out.println("Login Failed");
+                        AlertBox.displayAlert("Email hoac mat khau khong chinh xac");
+                    }
+
+                } else {
                     AlertBox.displayAlert("Email hoac mat khau khong chinh xac");
                 }
                 // thuc hien cho admin
-            }else{
+            } else {
                 String queryStr = "select * from patient where mail = '" + loginTextField.getText() + "';";
 
-                user = DB.dbExecuteQuery( queryStr);
-                if ( user.next()){
+                user = DB.dbExecuteQuery(queryStr);
+                String hos_id = null;
+                if (user.next()) {
                     String a;
                     String b;
-                    a = user.getString( "mail");
-                    b = user.getString( "password");
-                    if( a.equals( loginTextField.getText())  && b.equals( loginPasswordField.getText()) ){
+                    a = user.getString("mail");
+                    b = user.getString("password");
+                    if (a.equals(loginTextField.getText()) && b.equals(loginPasswordField.getText())) {
                         System.out.println("Login successfully");
                         HelloApplication.email = user.getString("mail");
                         HelloApplication.name = user.getString("first_name") + " " + user.getString("last_name");
@@ -89,45 +129,66 @@ public class LoginController {
                         HelloApplication.first_name = user.getString("first_name");
                         HelloApplication.last_name = user.getString("last_name");
                         HelloApplication.num = user.getInt("number_injection");
-                        HelloApplication.fxmlLoader = new FXMLLoader( HelloApplication.class.getResource("UserPage.fxml"));
+                        hos_id = user.getString("hos_id");
+
+
+                        HelloApplication.fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("UserPage.fxml"));
                         HelloApplication.scene = new Scene(HelloApplication.fxmlLoader.load());
 
                         HelloApplication.window.setTitle("Hello!");
                         HelloApplication.window.setScene(HelloApplication.scene);
                         HelloApplication.window.show();
                         AlertBox.displayAlert("Dang Nhap Thanh Cong");
-                    }else{
+                    } else {
                         System.out.println("Login Failed");
                         AlertBox.displayAlert("Email hoac mat khau khong chinh xac");
                     }
 
-                }else{
+                } else {
                     AlertBox.displayAlert("Email hoac mat khau khong chinh xac");
+                }
+                if( hos_id != null){
+                    queryStr = "select name from hospital where hos_id ='"+hos_id+"';";
+                    user = DB.dbExecuteQuery( queryStr);
+                    if( user.next()){
+                        HelloApplication.hospital = user.getString("name");
+                    }
                 }
             }
 
-        }catch (SQLException | IOException e){
+        } catch (SQLException | IOException e) {
             System.out.println("Error in loginController : " + e.getMessage());
-        }finally{
+        } finally {
             System.out.println("finally");
 
         }
 
 
     }
+
     @FXML
-    public void registerAction()  throws SQLException, ClassNotFoundException{
-        try{
+    public void registerAction() throws SQLException, ClassNotFoundException {
+        try {
             System.out.println("Register");
-            HelloApplication.fxmlLoader = new FXMLLoader( HelloApplication.class.getResource("userRegister.fxml"));
+            HelloApplication.fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("userRegister.fxml"));
             HelloApplication.scene = new Scene(HelloApplication.fxmlLoader.load());
             System.out.println("Register");
             HelloApplication.window.setScene(HelloApplication.scene);
             HelloApplication.window.show();
 
-        } catch (  IOException e ){
+        } catch (IOException e) {
 
-            System.out.println("Error in registerAction method in logincontroller\n" + e.getMessage() + "\n" );
+            System.out.println("Error in registerAction method in logincontroller\n" + e.getMessage() + "\n");
         }
+    }
+    @FXML
+    public void checkUserAction() {
+        System.out.println("Da Bam check use Action");
+        checkAdmin.setSelected( false);
+    }
+    @FXML
+    public void checkAdminAction() {
+        checkUser.setSelected(false);
+        System.out.println("Da Bam check Admin Action");
     }
 }

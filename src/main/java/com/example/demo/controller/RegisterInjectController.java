@@ -37,6 +37,8 @@ public class RegisterInjectController implements Initializable {
                 "Bach Dang", "Dong Mac", "Thanh Nhan", "Dong Nhan"
         };
         hospitalRegister.getItems().addAll( hospital);
+        hospitalRegister.setValue( HelloApplication.hospital);
+
     }
 
     public void submitRegister(){
